@@ -1,5 +1,6 @@
 ---
 page_type: sample
+description: Connecting STMicroelectronics B-L475E-IOT01A and B-L4S5I-IOT01A devices to Azure IoT using Azure RTOS
 languages:
 - c
 products:
@@ -56,13 +57,12 @@ The cloned repo contains a setup script that installs and configures the require
 > Note: The setup script installs the following tools:
 > * [GCC](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm): Compile
 > * [CMake](https://cmake.org): Build
-> * [Ninja](https://ninja-build.org): Build
 > * [Termite](https://www.compuphase.com/software_termite.htm): Monitor COM port output for connected devices
 > * [Azure IoT Explorer](https://github.com/Azure/azure-iot-explorer/releases): Cross-platform utility to  monitor and manage Azure IoT resources
 
 To run the setup script:
 
-1. Open a console app with administrator privileges, go to the following path in the repo, and run the setup script named *get-toolchain.bat*. If you use File Explorer, right-click the file and select **Run As Administrator**.
+1. From File Explorer, navigate to the following path in the repo and run the setup script named *get-toolchain.bat*:
 
     > *getting-started\tools\get-toolchain.bat*
 
@@ -247,7 +247,7 @@ You can use the **Termite** utility to monitor communication and confirm that yo
     Sending message {"temperature": 29.97}
     ```
 
-    > **Important**: If the DNS client initialization fails and notifies you that the Wi-Fi firmware is out of date, you'll need to update the Wi-Fi module firmware. Download and install the [Inventek ISM 43362 Wi-Fi module firmware update](https://www.st.com/content/ccc/resource/technical/binary_resources/utilities/group0/7d/0b/be/f2/6a/51/4f/a2/inventek_fw_updater/files/inventek_fw_updater.zip/jcr:content/translations/en.inventek_fw_updater.zip). Then press the **Reset** button on the device to recheck your connection, and continue this tutorial.
+    > **Important**: If the DNS client initialization fails and notifies you that the Wi-Fi firmware is out of date, you'll need to update the Wi-Fi module firmware. Download and install the [Inventek ISM 43362 Wi-Fi module firmware update](https://www.st.com/resource/en/utilities/inventek_fw_updater.zip). Then press the **Reset** button on the device to recheck your connection, and continue this tutorial.
 
 Keep Termite open to monitor device output in subsequent steps.
 

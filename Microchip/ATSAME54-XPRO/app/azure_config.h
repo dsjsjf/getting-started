@@ -5,22 +5,35 @@
 #define _AZURE_CONFIG_H
 
 // ----------------------------------------------------------------------------
-// Azure IoT Hub Connection Transport
-// Define this to use the nx client, otherwise MQTT
-// ----------------------------------------------------------------------------
-//#define USE_NX_CLIENT_PREVIEW
-
-// ----------------------------------------------------------------------------
-// Azure IoT Device information
-// ----------------------------------------------------------------------------
-#define IOT_HUB_HOSTNAME    ""
-#define IOT_DEVICE_ID       ""
-#define IOT_PRIMARY_KEY     ""
-
-// ----------------------------------------------------------------------------
 // 0 - BME280 sensor is not present
 // 1 - BME280 sensor is present
 // ----------------------------------------------------------------------------
-#define __SENSOR_BME280__ 0
+#define __SENSOR_BME280__ 1
 
-#endif
+// ----------------------------------------------------------------------------
+// Azure IoT Hub Connection Transport
+// Define this to use MQTT, else Azure RTOS SDK for Azure IoT
+// ----------------------------------------------------------------------------
+#define ENABLE_MQTT
+
+// ----------------------------------------------------------------------------
+// Azure IoT Dynamic Provisioning Service
+// Define this to use the DPS service, otherwise direct IoT Hub
+// ----------------------------------------------------------------------------
+//#define ENABLE_DPS
+
+// ----------------------------------------------------------------------------
+// Azure IoT Hub config
+// ----------------------------------------------------------------------------
+#define IOT_HUB_HOSTNAME ""
+#define IOT_DEVICE_ID    ""
+#define IOT_PRIMARY_KEY  ""
+
+// ----------------------------------------------------------------------------
+// Azure IoT DPS config
+// ----------------------------------------------------------------------------
+#define IOT_DPS_ENDPOINT        "global.azure-devices-provisioning.net"
+#define IOT_DPS_ID_SCOPE        ""
+#define IOT_DPS_REGISTRATION_ID ""
+
+#endif // _AZURE_CONFIG_H
